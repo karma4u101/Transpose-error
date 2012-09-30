@@ -7,9 +7,10 @@ Lift 2.5-M1. The same code runs without any problem with Lift 2.4.
 To reproduce the error (and/or make it run) follow the steps bellow.
 
 1) Get the stack trace 
-    Transpose-error$ ./sbt 
-    > compile
-    > last 
+ 
+	Transpose-error$ ./sbt 
+	> compile
+	> last 
 
 **The Problem:**
 The stack trace does not hint on the orgin of the problem (in the project code) although you will be able to fix the problem from within  
@@ -20,14 +21,18 @@ In 2.4 the code worked without a added net.liftweb.record.MandatoryTypedField **
 **get** or **is** call the code will not compile.
 
 2) Make it run 
+
 Edit and change the **last line** in the **render method** in **code.snippet.Countries** from: 
-     object Countries extends Loggable {
-       :
-     def render = { 
-       :
-    "* *" #> (c.name)
+ 
+	object Countries extends Loggable {
+	:
+	def render = { 
+	:
+	"* *" #> (c.name)
+ 
 To
-    "* *" #> (c.name.get)
+ 
+	"* *" #> (c.name.get)
 
 [1] https://github.com/karma4u101/Templating-With-Twitter-Bootstrap
 
