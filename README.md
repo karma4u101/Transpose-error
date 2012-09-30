@@ -1,7 +1,7 @@
 Transpose error
 ===============
 
-This is a stripped down example taken from [1] (well there may still be some noice) that will produce an "hard to locate" error when set-up to run with 
+This is a stripped down example taken from [[1]] (well there may still be some noice) that will produce an "hard to locate" error when set-up to run with 
 Lift 2.5-M1. The same code runs without any problem with Lift 2.4. 
 
 To reproduce the error (and/or make it run) follow the steps bellow.
