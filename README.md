@@ -1,12 +1,13 @@
 Transpose error
 ===============
 
-This is a stripped down example taken from [1] (well there may still be some noice) that will produce an "hard to locate" error when set-up to run with 
+This is a stripped down example taken from (ref 1)[1] (well there may still be some noice) that will produce an "hard to locate" error when set-up to run with 
 Lift 2.5-M1. The same code runs without any problem with Lift 2.4. 
 
 To reproduce the error (and/or make it run) follow the steps bellow.
 
 1) Get the stack trace 
+ 
 	Transpose-error$ ./sbt 
 	> compile
 	> last 
@@ -20,16 +21,19 @@ In 2.4 the code worked without a added net.liftweb.record.MandatoryTypedField **
 **get** or **is** call the code will not compile.
 
 2) Make it run 
-Edit and change the **last line** in the **render method** in **code.snippet.Countries** from: 
 
+Edit and change the **last line** in the **render method** in **code.snippet.Countries** from: 
+ 
 	object Countries extends Loggable {
 	:
 	def render = { 
 	:
 	"* *" #> (c.name)
-To
-	"* *" #> (c.name.get)
 
+To
+ 
+	"* *" #> (c.name.get)
+ 
 [1] https://github.com/karma4u101/Templating-With-Twitter-Bootstrap
 
 
