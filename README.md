@@ -29,11 +29,11 @@ Edit and change the **last line** in the **render method** in **code.snippet.Cou
 	def render = { 
 	:
 	"* *" #> (c.name)
- 
+
 To
  
 	"* *" #> (c.name.get)
-
+ 
 [1] https://github.com/karma4u101/Templating-With-Twitter-Bootstrap
 
 
